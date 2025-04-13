@@ -5,6 +5,7 @@ This repository contains a collection of scripts and utilities for the WTFB deve
 ## Repository Structure
 
 - **migration/** - Scripts for migrating data and configurations between environments
+- **vscode/** - VS Code configuration files and bootstrap scripts
 - **setup/** - Environment setup and configuration scripts
 - **ci/** - CI/CD related utilities
 - **utils/** - General utility scripts
@@ -30,11 +31,28 @@ Make scripts executable:
 
 ```bash
 chmod +x migration/*.sh
+chmod +x vscode/bootstrap/*.sh
 ```
 
 ## Usage
 
 Each directory contains specific tools with their own documentation. See the README.md in each directory for detailed usage instructions.
+
+### VS Code Bootstrap
+
+To set up a new project with the WTFB VS Code configuration:
+
+```bash
+mkdir -p /path/to/your/project/.vscode
+cp -r vscode/bootstrap/* /path/to/your/project/.vscode/
+chmod +x /path/to/your/project/.vscode/bootstrap.sh
+```
+
+Then run the bootstrap script:
+
+```bash
+bash /path/to/your/project/.vscode/bootstrap.sh
+```
 
 ## Contributing
 
@@ -50,4 +68,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - Created by the WTFB development team
-- Special thanks to Auggie, our ARCHitect-in-the-IDE
+- Special thanks to Auggie, our ARCH-nIDE (ARCHitect-in-the-IDE)
