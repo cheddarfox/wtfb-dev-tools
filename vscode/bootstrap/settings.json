@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.defaultProfile.windows": "WSL",
+    "terminal.integrated.profiles.windows": {
+        "WSL": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [],
+            "icon": "terminal-ubuntu"
+        }
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
