@@ -16,14 +16,20 @@ Using dedicated browser profiles for development work offers several advantages:
 
 ### Chrome Development Profile
 
-We've created a script to launch Chrome with a dedicated development profile:
+We've created a script to launch Chrome with a dedicated development profile. By default, it uses the "Dev Chrome" profile, but also supports a backup "WTFB-Development" profile:
 
 ```bash
-# Launch Chrome with development profile
+# Launch Chrome with default development profile (Dev Chrome)
 ~/Projects/wtfb-dev-tools/launch-dev-chrome.sh
 
 # Launch Chrome with development profile and open a specific URL
 ~/Projects/wtfb-dev-tools/launch-dev-chrome.sh http://localhost:3000
+
+# Launch Chrome with backup development profile (WTFB-Development)
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh --use-backup
+
+# Launch Chrome with backup profile and open a specific URL
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh --use-backup http://localhost:3000
 ```
 
 ### Best Practices for Development Browsers
@@ -50,7 +56,7 @@ We've created a script to launch Chrome with a dedicated development profile:
    - Enable "Show rulers on hover"
    - Enable network request blocking for testing offline scenarios
 4. Bookmark important development resources:
-   - Local development URLs (http://localhost:3000)
+   - Local development URLs (`http://localhost:3000`)
    - Clerk Dashboard
    - Supabase Dashboard
    - GitHub repository
