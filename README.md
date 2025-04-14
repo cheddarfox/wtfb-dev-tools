@@ -1,71 +1,72 @@
 # WTFB Development Tools
 
-This repository contains a collection of scripts and utilities for the WTFB development team. These tools are designed to streamline common development tasks, ensure consistency across environments, and improve team productivity.
+A collection of tools, scripts, and best practices for WTFB development.
 
-## Repository Structure
+## Browser Profiles for Development
 
-- **migration/** - Scripts for migrating data and configurations between environments
-- **vscode/** - VS Code configuration files and bootstrap scripts
-- **setup/** - Environment setup and configuration scripts
-- **ci/** - CI/CD related utilities
-- **utils/** - General utility scripts
+### Why Use Dedicated Browser Profiles?
 
-## Getting Started
+Using dedicated browser profiles for development work offers several advantages:
 
-### Prerequisites
+1. **Separation of concerns**: Keeps development cookies, cache, and extensions separate from personal browsing
+2. **Clean testing environment**: Ensures a consistent starting point for testing
+3. **Prevents conflicts**: Avoids issues with extensions or settings that might interfere with development
+4. **Security**: Reduces risk of accidentally using production credentials in development environments
+5. **Organized bookmarks**: Maintain development-specific bookmarks and resources
 
-- Bash shell environment (WSL recommended for Windows users)
-- Git
-- Basic command line knowledge
+### Chrome Development Profile
 
-### Installation
-
-Clone this repository to your local machine:
+We've created a script to launch Chrome with a dedicated development profile. By default, it uses the "Dev Chrome" profile, but also supports a backup "WTFB-Development" profile:
 
 ```bash
-git clone https://github.com/cheddarfox/wtfb-dev-tools.git
-cd wtfb-dev-tools
+# Launch Chrome with default development profile (Dev Chrome)
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh
+
+# Launch Chrome with development profile and open a specific URL
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh http://localhost:3000
+
+# Launch Chrome with backup development profile (WTFB-Development)
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh --use-backup
+
+# Launch Chrome with backup profile and open a specific URL
+~/Projects/wtfb-dev-tools/launch-dev-chrome.sh --use-backup http://localhost:3000
 ```
 
-Make scripts executable:
+### Best Practices for Development Browsers
 
-```bash
-chmod +x migration/*.sh
-chmod +x vscode/bootstrap/*.sh
-```
+1. **Use dedicated profiles**: Always use the development profile for testing and development work
+2. **Install development-specific extensions**: 
+   - React Developer Tools
+   - Redux DevTools
+   - Accessibility Insights
+   - Web Vitals
+   - Clerk DevTools (for authentication testing)
+3. **Disable cache when DevTools is open**: In DevTools > Settings > Preferences
+4. **Use incognito mode for testing user flows**: Especially for authentication and onboarding
+5. **Clear browser data regularly**: Start fresh before testing critical features
+6. **Test across multiple browsers**: Chrome, Firefox, Safari, and Edge
+7. **Test responsive designs**: Use responsive design mode in DevTools
 
-## Usage
+## Setting Up Your Development Profile
 
-Each directory contains specific tools with their own documentation. See the README.md in each directory for detailed usage instructions.
+1. Run the `launch-dev-chrome.sh` script to create and open the development profile
+2. Install the recommended extensions
+3. Configure DevTools settings:
+   - Enable "Disable cache (while DevTools is open)"
+   - Enable "Show rulers on hover"
+   - Enable network request blocking for testing offline scenarios
+4. Bookmark important development resources:
+   - Local development URLs (`http://localhost:3000`)
+   - Clerk Dashboard
+   - Supabase Dashboard
+   - GitHub repository
+   - Jira board
+   - Confluence documentation
 
-### VS Code Bootstrap
+## Additional Tools
 
-To set up a new project with the WTFB VS Code configuration:
+More development tools will be added to this repository as they are created.
 
-```bash
-mkdir -p /path/to/your/project/.vscode
-cp -r vscode/bootstrap/* /path/to/your/project/.vscode/
-chmod +x /path/to/your/project/.vscode/bootstrap.sh
-```
+---
 
-Then run the bootstrap script:
-
-```bash
-bash /path/to/your/project/.vscode/bootstrap.sh
-```
-
-## Contributing
-
-1. Create a feature branch (`git checkout -b feature/amazing-script`)
-2. Commit your changes (`git commit -m 'Add some amazing script'`)
-3. Push to the branch (`git push origin feature/amazing-script`)
-4. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Created by the WTFB development team
-- Special thanks to Auggie, our ARCH-nIDE (ARCHitect-in-the-IDE)
+Created and maintained by the WTFB development team.
