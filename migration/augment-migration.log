@@ -1,0 +1,29 @@
+=== Augment Migration Log ===
+Date: Sun Apr 13 14:37:52 EDT 2025
+Source: /mnt/c/Users/Scott/AppData/Roaming/Code/User/workspaceStorage/3c540e917b94c41f10f7f8bd49a88fb7/Augment.vscode-augment
+Destination: /home/cheddarfox/.vscode-server/data/User/workspaceStorage/05485d8a6ebb8f20e623dd25dd2ff75e/Augment.vscode-augment
+Mode: full
+Components: memories
+===========================
+[INFO] Starting Augment migration in full mode
+[INFO] Creating backup of destination directory to /home/cheddarfox/.vscode-server/data/User/workspaceStorage/05485d8a6ebb8f20e623dd25dd2ff75e/Augment.vscode-augment_backup_20250413_143752
+[SUCCESS] Backup created successfully
+[INFO] Migrating memories component
+[INFO] Merging memories files
+[INFO] Analyzing memories file for new sections to merge
+[INFO] Found new section to merge: User Context
+[INFO] Found new section to merge: WTFB Project
+[INFO] Found new section to merge: Roles & Responsibilities
+[INFO] Found new section to merge: WTFB Tech Stack
+[INFO] Found new section to merge: Protocols
+[INFO] Found new section to merge: Jira Configuration
+[INFO] Found new section to merge: Social Media
+[INFO] Found new section to merge: Recent Activities & Website Updates
+[INFO] Found new section to merge: Confluence & Labeling
+[INFO] Found new section to merge: WSL
+[INFO] New sections to merge:\n - User Context\n - WTFB Project\n - Roles & Responsibilities\n - WTFB Tech Stack\n - Protocols\n - Jira Configuration\n - Social Media\n - Recent Activities & Website Updates\n - Confluence & Labeling\n - WSL
+[SUCCESS] Merged memories files successfully
+[SUCCESS] Migration completed successfully
+[INFO] Backup is available at: [0;34m[INFO] Creating backup of destination directory to /home/cheddarfox/.vscode-server/data/User/workspaceStorage/05485d8a6ebb8f20e623dd25dd2ff75e/Augment.vscode-augment_backup_20250413_143752[0m
+[0;32m[SUCCESS] Backup created successfully[0m
+/home/cheddarfox/.vscode-server/data/User/workspaceStorage/05485d8a6ebb8f20e623dd25dd2ff75e/Augment.vscode-augment_backup_20250413_143752
